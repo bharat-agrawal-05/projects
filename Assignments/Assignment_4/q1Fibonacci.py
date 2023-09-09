@@ -1,3 +1,4 @@
+#part-a
 def fibonacci(n):
     a=0
     b=1
@@ -8,9 +9,8 @@ def fibonacci(n):
         b=c
         c=a+b
         
-
-
-#fibonacci(int(input("q1 part a input (integer): ")))    
+#part-b
+fibonacci(int(input("q1 part a input (integer): ")))    
 
 def majority_element(l):
     for i in l:
@@ -19,9 +19,9 @@ def majority_element(l):
     
     return -1
         
-#print(majority_element(eval(input('q1 part b input (list): '))))
+print(majority_element(eval(input('q1 part b input (list): '))))
 
-
+#part-c
 def repeating_element(l):
     for i in l:
         a=[]
@@ -33,8 +33,9 @@ def repeating_element(l):
             
     return 'no repeating element exists'
 
-#print(repeating_element(eval(input('q1 part c input (list): '))))
+print(repeating_element(eval(input('q1 part c input (list): '))))
 
+#part-d
 def pattern(n):
     for i in range(n):
         print(" "*(n-i),end="")
@@ -45,8 +46,9 @@ def pattern(n):
 
         print()
             
-#pattern(int(input('q1 part d input (integer): ')))
+pattern(int(input('q1 part d input (integer): ')))
 
+#part-e
 def remove_repeated_elements(l):
     a=[]
     for i in l:
