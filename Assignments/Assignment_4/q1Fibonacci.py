@@ -19,6 +19,40 @@ def majority_element(l):
     
     return -1
         
-print(majority_element(eval(input('q1 part b input (list): '))))
+#print(majority_element(eval(input('q1 part b input (list): '))))
 
-    
+
+def repeating_element(l):
+    for i in l:
+        a=[]
+        for i in l:
+            if i not in a:
+                a.append(i)
+            else:
+                return i
+            
+    return 'no repeating element exists'
+
+#print(repeating_element(eval(input('q1 part c input (list): '))))
+
+def pattern(n):
+    for i in range(n):
+        print(" "*(n-i),end="")
+        for j in range(1,i+1):
+            print(j,end="")
+        for k in range(i-1,0,-1):
+            print(k,end="")
+
+        print()
+            
+#pattern(int(input('q1 part d input (integer): ')))
+
+def remove_repeated_elements(l):
+    a=[]
+    for i in l:
+        if i not in a:
+            a.append(i)
+    return a
+
+print(remove_repeated_elements(eval(input('q1 part e input (list): '))))
+
