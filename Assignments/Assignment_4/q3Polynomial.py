@@ -3,17 +3,17 @@
 def coff_poly(l):
     degree=int(input('Enter the degree of the polynomial: '))
     if degree>len(l)-1:
-        return('Degree is too high')
+        return 'Degree is too high'
 
     degree=-degree-1
-    return l[degree]
+    return f'The Coefficient of the required degree is {l[degree]}'
 
 print(coff_poly(eval(input('q3 part a input (list): '))))
 
 #part-b
 
 def poly(x):
-    return 4*(x**3)-6*(x**2)+0*x-1
+    return f'value of the polynomial for the given value is {4*(x**3)-6*(x**2)+0*x-1}'
 
 print(poly(int(input('q3 part b input (integer): '))))
 
@@ -26,7 +26,6 @@ def polynomial(degree):
     return coefficients
 
 def addition_poly(f1,f2):
-    n=min(len(f1),len(f2))
     m=max(len(f1),len(f2))
     if len(f1)>len(f2):
         diff=len(f1)-len(f2)
@@ -57,7 +56,7 @@ a.reverse()
 for i in a:
     output+=str(int(i))+"x^"+str(m)+'+'
     m-=1
-output=output.replace('x^0+','x^0')
+output=output.replace('x^0+',' ')
 print(output)
 
 
