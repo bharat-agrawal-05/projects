@@ -60,3 +60,4 @@ for i in a:
 output=output.replace('x^0+','x^0')
 print(output)
 
+
