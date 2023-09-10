@@ -9,15 +9,16 @@ sort_(eval(input("q2 part a input (list): ")))
 
 
 #part-b
-def replicate(l):
-    return l*3
-
-print(replicate(eval(input("q2 part b input (list): "))))
+def replicate(l,x):
+    return l*x
+l=eval(input("q2 part b input (list): "))
+x=int(input("q2 part b input (number): "))
+print(replicate(l,x))
 
 #part-c
 
 def min_max(l):
-    return min(l),max(l)
+    return f'minimum of list is {min(l)}, maximum of list is {max(l)}'
 
 print(min_max(eval(input("q2 part c input (list): "))))
 
@@ -28,7 +29,7 @@ def position(l):
     if k not in l:
         return "element not in list"
     posi=l.index(k)
-    return posi
+    return f'element found at index {posi}'
 
 
 print(position(eval(input("q2 part d input (list): "))))
@@ -38,7 +39,7 @@ def sum(l):
     s=0
     for i in l:
         s+=i
-    return s
+    return f'sum of list is {s}'
 
 print(sum(eval(input("q2 part e input (list): "))))
 
