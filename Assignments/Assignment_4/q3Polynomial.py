@@ -57,7 +57,7 @@ a.reverse()
 for i in a:
     output+=str(int(i))+"x^"+str(m)+'+'
     m-=1
-output=output.replace('x^0+','x^0')
+output=output.replace('x^0+',' ')
 print(output)
 
 
