@@ -9,8 +9,9 @@ def fibonacci(n):
         b=c
         c=a+b
         
-#part-b
 fibonacci(int(input("q1 part a input (integer): ")))    
+
+#part-b
 
 def majority_element(l):
     for i in l:
