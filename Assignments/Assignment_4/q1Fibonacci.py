@@ -5,11 +5,11 @@ def fibonacci(n):
     c=0
     for i in range(n):
         print(c,end=" ")
-        a=b
+        a=b                     #number swapping
         b=c
         c=a+b
         
-fibonacci(int(input("q1 part a input (integer): ")))    
+fibonacci(int(input("q1 part a input (integer): ")))   
 print()        #creating a new line
 #part-b
 
