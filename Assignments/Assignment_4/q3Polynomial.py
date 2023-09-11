@@ -2,7 +2,7 @@
 
 def coff_poly(l):
     degree=int(input('Enter the degree of the polynomial: '))
-    if degree>len(l)-1:
+    if degree>len(l)-1:    #checking if degree is greater than length of list
         return 'Degree is too high'
 
     degree=-degree-1
@@ -19,7 +19,7 @@ print(poly(int(input('q3 part b input (integer): '))))
 
 #part-c 
 
-def polynomial(degree):
+def polynomial(degree):    #for inputting the coefficients of polynomial
     coefficients = []
     for i in range(degree + 1):
         coefficients.append(float(input(f"Enter coefficient for x^{i}:")))
@@ -27,15 +27,15 @@ def polynomial(degree):
 
 def addition_poly(f1,f2):
     m=max(len(f1),len(f2))
-    if len(f1)>len(f2):
+    if len(f1)>len(f2):        #for cases in which 1st degree>2nd degree
         diff=len(f1)-len(f2)
-        for i in range(diff):
-            f2.append(0)
+        for i in range(diff):  
+            f2.append(0)       #appending the greater degree coefficients as it is
     
-    elif len(f2)>len(f1):
+    elif len(f2)>len(f1):      #for cases in which 1st degree<2nd degree
         diff=len(f2)-len(f1)
         for i in range(diff):
-            f1.append(0)
+            f1.append(0)      #appending the greater degree coefficients as it is
 
     f3=[]
     for i in range(m):    

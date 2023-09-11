@@ -1,6 +1,6 @@
 #part-a
 
-def create_2d_matrix(rows,cols):
+def create_2d_matrix(rows,cols):    #this creates a 2D matrix by taking number of rows and columns 
     L=[]
     for i in range (1,rows+1):
         L1=[]
@@ -21,10 +21,10 @@ for i in l:             #this prints the 2d list in matrix format
 
 k=eval(input("Enter a number to check if it is present in the matrix: "))
 found=False
-for i in range(1,len(l)+1):
+for i in range(1,len(l)+1):         #this checks if a certain element exists in a list
     for j in range(1,len(l[0])+1):
         if k==l[i-1][j-1]:
-            print(f"{k} is present in the matrix at position {i,j}")
+            print(f"{k} is present in the matrix at position {i,j}")   #prints the position of the element if it exists
             found=True
 
 if not found:
@@ -33,10 +33,10 @@ if not found:
 
 #part-b
 
-def transpose(l,n):
+def transpose(l,n):         #transposes the matrix
     L=[]
     for i in range(n):
-        L.append([])
+        L.append([])       #creates empty 2D list
 
     for i in l:
         a=0
@@ -46,7 +46,7 @@ def transpose(l,n):
 
     return L
 
-def skew_check(l,n):
+def skew_check(l,n):    #checks for skew symmetric
     for i in range(n):
         for j in range(n):
             if l[i][j]!=-l[j][i]:
