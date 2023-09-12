@@ -50,10 +50,6 @@ f1=polynomial(int(input("Enter the degree of the first polynomial:")))
 f2=polynomial(int(input("Enter the degree of the second polynomial:")))
 
 a=addition_poly(f1,f2)
-output=""
-
-m=len(a)-1
-print(a)
 output=''
 for i in range(len(a)-1,-1,-1):
     if i == 0:
