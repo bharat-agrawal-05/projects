@@ -44,6 +44,8 @@ def addition_poly(f1,f2):
         f3[i]=f1[i]+f2[i]
     return f3
 
+
+
 f1=polynomial(int(input("Enter the degree of the first polynomial:")))
 f2=polynomial(int(input("Enter the degree of the second polynomial:")))
 
@@ -51,18 +53,12 @@ a=addition_poly(f1,f2)
 output=""
 
 m=len(a)-1
-
-a.reverse()
-for i in a:
-    output+=str(int(i))+"x^"+str(m)+'+'
-    m-=1
-output=output.replace('x^0+',' ')
-print(output)
-
-for i in range(len(a)):
-    if i == len(a) - 1:
-        print(f"({a[i]}x^{i})")
+print(a)
+output=''
+for i in range(len(a)-1,-1,-1):
+    if i == 0:
+        output+=(f"({a[i]}x^{i})")
     else:
-        print(f"({a[i]}x^{i}) +", end=" ")
+        output+=(f"({a[i]}x^{i}) + ")
 
-
+print(output.replace("x^0",""))
