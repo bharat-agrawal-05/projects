@@ -59,4 +59,10 @@ for i in a:
 output=output.replace('x^0+',' ')
 print(output)
 
+for i in range(len(a)):
+    if i == len(a) - 1:
+        print(f"({a[i]}x^{i})")
+    else:
+        print(f"({a[i]}x^{i}) +", end=" ")
+
 
