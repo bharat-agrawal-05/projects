@@ -58,5 +58,3 @@ for i in a:
     m-=1
 output=output.replace('x^0+',' ')
 print(output)
-
-

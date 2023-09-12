@@ -42,5 +42,3 @@ def sum(l):
     return f'sum of list is {s}'
 
 print(sum(eval(input("q2 part e input (list): "))))
-
-
