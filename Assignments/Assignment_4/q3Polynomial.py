@@ -3,6 +3,7 @@
 def coff_poly(l):
     degree=int(input('Enter the degree of the polynomial: '))
     if degree>len(l)-1:    #checking if degree is greater than length of list
+
         return 'Degree is too high'
 
     degree=-degree-1
@@ -50,6 +51,7 @@ f1=polynomial(int(input("Enter the degree of the first polynomial:")))
 f2=polynomial(int(input("Enter the degree of the second polynomial:")))
 
 a=addition_poly(f1,f2)
+
 output=''
 for i in range(len(a)-1,-1,-1):
     if i == 0:
@@ -58,3 +60,4 @@ for i in range(len(a)-1,-1,-1):
         output+=(f"({a[i]}x^{i}) + ")
 
 print(output.replace("x^0",""))
+

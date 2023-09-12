@@ -10,7 +10,9 @@ sort_(eval(input("q2 part a input (list): ")))
 
 #part-b
 def replicate(l,x):
+
     return l*x     #replication x times
+
 l=eval(input("q2 part b input (list): "))
 x=int(input("q2 part b input (number): "))
 print(replicate(l,x))
@@ -18,7 +20,9 @@ print(replicate(l,x))
 #part-c
 
 def min_max(l):
+
     return f'minimum of list is {min(l)}, maximum of list is {max(l)}'      #using min and max functions
+
 
 print(min_max(eval(input("q2 part c input (list): "))))
 
@@ -39,6 +43,7 @@ def sum(l):
     s=0
     for i in l:
         s+=i    #sum of elements
+
     return f'sum of list is {s}'
 
 print(sum(eval(input("q2 part e input (list): "))))
