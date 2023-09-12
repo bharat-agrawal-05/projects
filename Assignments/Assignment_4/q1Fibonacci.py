@@ -1,13 +1,13 @@
 #part-a
 def fibonacci(n):
-    a=0
-    b=1
-    c=0
+    a=0             #assign initial value as 0
+    b=1             #assign second value as 0
+    c=0     
     for i in range(n):
         print(c,end=" ")
         a=b                     #number swapping
         b=c
-        c=a+b
+        c=a+b                   #storing numbers in fibonacci form
         
 fibonacci(int(input("q1 part a input (integer): ")))   
 print()        #creating a new line
@@ -15,7 +15,7 @@ print()        #creating a new line
 
 def majority_element(l):
     for i in l:
-        if l.count(i)>len(l)/2:
+        if l.count(i)>len(l)/2:        #checks for majority element
             return i
     
     return -1
@@ -25,10 +25,10 @@ print(majority_element(eval(input('q1 part b input (list): '))))
 #part-c
 def repeating_element(l):
     for i in l:
-        a=[]
+        a=[]    #creating empty list
         for i in l:
-            if i not in a:
-                a.append(i)
+            if i not in a:          
+                a.append(i)     #appending non repeating elements in a
             else:
                 return i
             
@@ -51,10 +51,10 @@ pattern(int(input('q1 part d input (integer): ')))
 
 #part-e
 def remove_repeated_elements(l):
-    a=[]
+    a=[]     #creating empty list
     for i in l:
         if i not in a:
-            a.append(i)
+            a.append(i)    #appending only if element not already present
     return a
 
 print(remove_repeated_elements(eval(input('q1 part e input (list): '))))
