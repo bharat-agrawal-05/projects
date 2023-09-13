@@ -1,3 +1,5 @@
+#method-1
+
 from numpy import roots as r 
 n=int(input("Enter the degree of polynomial"))
 ls=[]
@@ -8,3 +10,25 @@ print("The roots of the polynomial are:")
 for i in l:
     print(i)
     
+
+#method-2
+import unicodeit
+print('To find the roots of a polynomial . . .') # Function of the Program
+
+f = []
+deg = int(input('Enter the highest degree of the polynomial : '))
+print('Enter coefficients from the highest degree to the constant . . .')
+for i in range(deg + 1) : f.append(float(input(unicodeit.replace(f'Enter a coefficient for x^{deg - i}: '))))
+
+def check(val) : 
+    result = 0
+    for i in range(len(f)) : result = result + f[i] * val ** (deg - i)
+    return result
+roots = []
+div = abs(int(f[deg] / f[0]))
+for i in range(-1 * div, div + 1) :
+    if check(i) == 0 : roots.append(i)
+roots = list(set(roots))
+print('The integral root(s) of the polynomial is/are . . .')
+for i in range(len(roots)) : print(roots[i], end = ', ')
+print('\b\b ')
