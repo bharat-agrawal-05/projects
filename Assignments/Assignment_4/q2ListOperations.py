@@ -40,14 +40,10 @@ print(position(eval(input("q2 part d input (list): "))))
 
 #part-e
 def sum(l):
-<<<<<<< HEAD
     s=0
     for i in l:
         s+=i    #sum of elements
 
     return f'sum of list is {s}'
-=======
-    return f'sum of list is {sum(l)}'
->>>>>>> 577dd4b916df2b0c6646f022a2e55450412bd17a
 
 print(sum(eval(input("q2 part e input (list): "))))
