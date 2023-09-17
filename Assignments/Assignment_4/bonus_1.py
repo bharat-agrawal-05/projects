@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 #method-1
 #the following code finds all the roots of a polynomial
 
+=======
+>>>>>>> 577dd4b916df2b0c6646f022a2e55450412bd17a
 from numpy import roots as r 
 n=int(input("Enter the degree of polynomial"))
 ls=[]
@@ -10,6 +13,7 @@ l=r(ls)
 print("The roots of the polynomial are:")
 for i in l:
     print(i)
+<<<<<<< HEAD
     
 
 #method-2
@@ -40,3 +44,6 @@ print('The integral root(s) of the polynomial is/are . . .')
 for i in range(len(roots)) :
     print(roots[i], end = ', ')
 print('\b\b ')
+=======
+    
+>>>>>>> 577dd4b916df2b0c6646f022a2e55450412bd17a
