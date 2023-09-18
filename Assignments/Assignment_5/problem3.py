@@ -3,7 +3,6 @@
 def scatSubStr(w,s):
     l=''
     try:
-       
         if len(w)==1:
             if w==s[0]:
                 l+=w
