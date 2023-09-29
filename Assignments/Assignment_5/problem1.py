@@ -1,5 +1,7 @@
 ######### code starts ###########
 import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
 # Use pandas to read the CSV
 csvData = pd.read_csv("Data.csv", sep=",")
 # Convert dataframe into a numpy array
@@ -38,15 +40,42 @@ def mode(population_density):
 
     return mode
 
-highest=max(population_density)
-highest_state=population_density.index(highest)
-print("Highest population density is",highest,"in",data[highest_state][0])
+# highest=max(population_density)
+# highest_state=population_density.index(highest)
+# print("Highest population density is",highest,"in",data[highest_state][0])
 
-lowest=min(population_density)
-lowest_state=population_density.index(lowest)
-print("Lowest population density is",lowest,"in",data[lowest_state][0])
+# lowest=min(population_density)
+# lowest_state=population_density.index(lowest)
+# print("Lowest population density is",lowest,"in",data[lowest_state][0])
 
-print("Median population density is",median(population_density))
-print("Average population density is",average(population_density))
+# print("Median population density is",median(population_density))
+# print("Average population density is",average(population_density))
 
-print("Mode of population density is",mode(population_density))
+# print("Mode of population density is",mode(population_density))
+
+#part-b
+
+xvalues=[]
+yvalues=[]
+for i in data:
+    xvalues.append(i[0])
+    yvalues.append(i[4])
+
+x_axis=np.arange(len(xvalues))
+
+plt.bar(x_axis-0.2,yvalues,width=0.4,label='Average Percentage area with > 30% slope')
+
+xvalues=[]
+yvalues=[]
+for i in data:
+    xvalues.append(i[0])
+    yvalues.append(i[5])
+
+plt.bar(x_axis+0.2,yvalues,width=0.4,label='road density')   
+plt.xticks(x_axis,xvalues,rotation='vertical')
+plt.legend()
+plt.show()
+
+#part-c
+
+
