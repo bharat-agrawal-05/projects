@@ -20,6 +20,9 @@ print(f'{revS} -> {string}')
 
 def scatSubStr(w,s):
     l=''
+    if len(w)==0:
+        return True
+    
     try:
         if len(w)==1:
             if w==s[0]:
