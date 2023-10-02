@@ -40,18 +40,18 @@ def mode(population_density):
 
     return mode
 
-# highest=max(population_density)
-# highest_state=population_density.index(highest)
-# print("Highest population density is",highest,"in",data[highest_state][0])
+highest=max(population_density)
+highest_state=population_density.index(highest)
+print("Highest population density is",highest,"in",data[highest_state][0])
 
-# lowest=min(population_density)
-# lowest_state=population_density.index(lowest)
-# print("Lowest population density is",lowest,"in",data[lowest_state][0])
+lowest=min(population_density)
+lowest_state=population_density.index(lowest)
+print("Lowest population density is",lowest,"in",data[lowest_state][0])
 
-# print("Median population density is",median(population_density))
-# print("Average population density is",average(population_density))
+print("Median population density is",median(population_density))
+print("Average population density is",average(population_density))
 
-# print("Mode of population density is",mode(population_density))
+print("Mode of population density is",mode(population_density))
 
 #part-b
 
@@ -69,13 +69,35 @@ xvalues=[]
 yvalues=[]
 for i in data:
     xvalues.append(i[0])
-    yvalues.append(i[5])
+    yvalues.append(i[5]*100)
 
-plt.bar(x_axis+0.2,yvalues,width=0.4,label='road density')   
+plt.bar(x_axis+0.2,yvalues,width=0.4,label='road density*100')   
 plt.xticks(x_axis,xvalues,rotation='vertical')
 plt.legend()
 plt.show()
 
 #part-c
+
+perArea30=[]
+roadDen=[]
+states=[]
+for i in data:
+    perArea30.append(i[4])
+
+perArea30.sort()
+for i in perArea30:
+    for j in data:
+        if i in j:
+            roadDen.append(j[5])
+            states.append(j[0])
+
+xValues=np.arange(len(roadDen))
+plt.bar(xValues,roadDen,width=0.4,label='road density')
+plt.xticks(xValues,states,rotation='vertical')
+plt.xlabel('States',fontsize=24)
+plt.ylabel('road density',fontsize=24)
+plt.title('Road density in increasing order of percentage area with slope > 30%',fontsize=24)
+plt.legend()
+plt.show()
 
 
