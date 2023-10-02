@@ -35,12 +35,12 @@ xyValues=[xValues[i]*yValues[i] for i in range(n)]
 mNum = (n*(np.sum(xyValues))) - (np.sum(xValues)*np.sum(yValues))
 mDen = (n*np.sum(xValues**2))-(np.sum(xValues)**2)
 mEst = mNum/mDen
-print(mEst)
+print("estimated value of m: ",mEst)
 
 # Estimating c
 # write formulae for c below:-
 cEst = (np.sum(yValues)-(mEst*np.sum(xValues)))/n
-print(cEst)
+print("estimated value of c: ",cEst)
 
 # dropping outlier/last element (100,10000) only in the view to zoomin:-
 plt.xlim(0,max(xValues[:-1]))
