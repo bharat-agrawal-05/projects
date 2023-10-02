@@ -1,4 +1,22 @@
-#part-b
+#part-a
+
+def perfRevCapStr(s,n):
+
+    if n==1:
+        return s[0]
+    
+    else:
+        news= s[n-1]+perfRevCapStr(s,n-1)
+
+    return news.upper()
+
+
+string=input("Enter a string: ")
+revS=perfRevCapStr(string,len(string))
+print(f'{revS} -> {string}')
+
+
+# part-b
 
 def scatSubStr(w,s):
     l=''
