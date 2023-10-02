@@ -1,3 +1,4 @@
+
 #part-a
 
 def perfRevCapStr(s,n):
@@ -6,14 +7,12 @@ def perfRevCapStr(s,n):
         return s[0]
     
     else:
-        news= s[n-1]+perfRevCapStr(s,n-1)
-
-    return news.upper()
+        return f'{(s[n-1]+perfRevCapStr(s,n-1)).upper()}'
 
 
 string=input("Enter a string: ")
-revS=perfRevCapStr(string,len(string))
-print(f'{revS} -> {string}')
+revS=print(f'{perfRevCapStr(string,len(string))} -> {string}')
+
 
 
 # part-b
