@@ -18,36 +18,13 @@ revS=print(f'{perfRevCapStr(string,len(string))} -> {string}')
 # part-b
 
 def scatSubStr(w,s):
-    l=''
-    if len(w)==0:
+    if w == '' :
         return True
-    
-    try:
-        if len(w)==1:
-            if w==s[0]:
-                l+=w
-                return True
-            
-            elif len(s)>1 and w!=s[0]:
-                s=s[1:]
-                return scatSubStr(w,s)
-
-            elif len(s)==1 and w!=s:
-                return False
-            
-        if w[0] == s[0]:
-            l+=w[0]
-            w=w[1:]
-            s=s[1:]
-            return scatSubStr(w,s)
-        else:
-            s=s[1:]
-            return scatSubStr(w,s)
-    
-    except IndexError:
+    if w[0] in s :
+        return scatSubStr(w[1 :], s[s.find(w[0]) + 1:])
+    else:
         return False
-        
-    
+
 w=input("Enter a word: ")
 s=input("Enter a string: ")
 if scatSubStr(w,s):
