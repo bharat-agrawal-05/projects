@@ -46,5 +46,9 @@ def scatSubStr(w,s):
         return False
         
     
-print(scatSubStr("cadbebb","cadbebb"))
-
+w=input("Enter a word: ")
+s=input("Enter a string: ")
+if scatSubStr(w,s):
+    print(f'{w} is a scattered substring of {s}')
+else:
+    print(f'{w} is not a scattered substring of {s}')
