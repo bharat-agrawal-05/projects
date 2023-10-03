@@ -16,19 +16,19 @@ perFarmer=np.array(perFarmer)
 perCapital = [i[9] for i in data]   # per capita income
 perCapital=np.array(perCapital)
 
-meanFarmer=np.mean(perFarmer)
-meanCapital=np.mean(perCapital)
+meanFarmer=np.mean(perFarmer)       #mean of percentage of farmers taking loan
+meanCapital=np.mean(perCapital)     #mean of per capita income
 
-rNum = np.sum((perFarmer-meanFarmer)*(perCapital-meanCapital))
-rDen = np.sqrt(np.sum((perFarmer-meanFarmer)**2)*np.sum((perCapital-meanCapital)**2))
+rNum = np.sum((perFarmer-meanFarmer)*(perCapital-meanCapital))                              #numerator of r
+rDen = np.sqrt(np.sum((perFarmer-meanFarmer)**2)*np.sum((perCapital-meanCapital)**2))       #denominator of r
 r=rNum/rDen
 print(f'Correlation coefficient between percentage of farmers taking loan and per capita income is {r}')
 
 #part-b
 plt.scatter(perFarmer,perCapital)
-plt.xlabel('Percentage of farmers taking loan')
-plt.ylabel('Per capita income')
-plt.title('Correlation between percentage of farmers taking loan and per capita income')
+plt.xlabel('Percentage of farmers taking loan',fontsize=20)
+plt.ylabel('Per capita income',fontsize=20)
+plt.title('Correlation between percentage of farmers taking loan and per capita income',fontsize=24)
 plt.show()
 
 
