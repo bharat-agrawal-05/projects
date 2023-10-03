@@ -18,9 +18,9 @@ perCap=[i[9] for i in data]
 plt.bar(women,perCap)
 plt.xlim(0,50)
 plt.ylim(0,300000)
-plt.xlabel("percentage of woemen in the overall workforce")
-plt.ylabel("per capita income")
-plt.title("percentage of women in the overall workforce vs per capita income")
+plt.xlabel("percentage of woemen in the overall workforce",fontsize=20)
+plt.ylabel("per capita income",fontsize=20)
+plt.title("percentage of women in the overall workforce vs per capita income",fontsize=20)
 plt.show()
             
 #part-2
@@ -28,9 +28,9 @@ plt.show()
 xValues=np.arange(50)
 yValues=xValues**2
 plt.plot(xValues,yValues,label='square function graph')
-plt.xlabel('X-Values',fonsize=16)
-plt.ylabel('Y-Values',fonsize=16)
-plt.title('Graph for Square Function',fonsize=16)
+plt.xlabel('X-Values',fontsize=20)
+plt.ylabel('Y-Values',fontsize=20)
+plt.title('Graph for Square Function',fontsize=24)
 plt.show()
 
 
