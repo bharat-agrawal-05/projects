@@ -78,3 +78,11 @@ plt.xlabel('Values of x--->',fontsize=20)
 plt.ylabel('Values of functions--->',fontsize=20)
 plt.title('Graph for all the functions: ',fontsize=20)
 plt.show()
+
+
+# The following are our observations --->
+print("f(n) grows exponentially")
+print("g(n) is fibonacci sequence")
+print("h(n) doubles for even n while remaining constant for odd n")
+print("k(n) is a sequence that adds the previous 2 odd numbers to the previous even number")
+
