@@ -57,7 +57,7 @@ print("Mode of population density is",mode(population_density))
 
 xvalues=[]
 yvalues=[]
-for i in data:
+for i in data:              #loop for adding values to the following lists
     xvalues.append(i[0])
     yvalues.append(i[4])
 
@@ -67,12 +67,12 @@ plt.bar(x_axis-0.2,yvalues,width=0.4,label='Average Percentage area with > 30% s
 
 xvalues=[]
 yvalues=[]
-for i in data:
+for i in data:                  #loop for adding values to the following lists
     xvalues.append(i[0])
     yvalues.append(i[5]*100)
 
-plt.bar(x_axis+0.2,yvalues,width=0.4,label='road density*100')   
-plt.xticks(x_axis,xvalues,rotation='vertical')
+plt.bar(x_axis+0.2,yvalues,width=0.4,label='road density*100')      #multiplying the road density by 100 for better visibility 
+plt.xticks(x_axis,xvalues,rotation='vertical')            #rotating the x-axis labels by 90 degrees and setting the x-axis labels
 plt.legend()
 plt.show()
 
@@ -82,7 +82,7 @@ perArea30=[]
 roadDen=[]
 states=[]
 for i in data:
-    perArea30.append(i[4])
+    perArea30.append(i[4])      #loop for adding values to the following lists
 
 perArea30.sort()
 for i in perArea30:
@@ -93,7 +93,7 @@ for i in perArea30:
 
 xValues=np.arange(len(roadDen))
 plt.bar(xValues,roadDen,width=0.4,label='road density')
-plt.xticks(xValues,states,rotation='vertical')
+plt.xticks(xValues,states,rotation='vertical')              #rotating the x-axis labels by 90 degrees and setting the x-axis labels
 plt.xlabel('States',fontsize=24)
 plt.ylabel('road density',fontsize=24)
 plt.title('Road density in increasing order of percentage area with slope > 30%',fontsize=24)
