@@ -32,8 +32,8 @@ xyValues=[xValues[i]*yValues[i] for i in range(n)]
 
 
 #write formulae of numerator and denominator of m below:-
-mNum = (n*(np.sum(xyValues))) - (np.sum(xValues)*np.sum(yValues))
-mDen = (n*np.sum(xValues**2))-(np.sum(xValues)**2)
+mNum = (n*(np.sum(xyValues))) - (np.sum(xValues)*np.sum(yValues))   #formula for numerator of M
+mDen = (n*np.sum(xValues**2))-(np.sum(xValues)**2)                  #formula for denominator of M
 mEst = mNum/mDen
 print("estimated value of m: ",mEst)
 
