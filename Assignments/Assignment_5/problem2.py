@@ -69,10 +69,10 @@ yvalues2=[g(i) for i in xvalues]
 yvalues3=[h(i) for i in xvalues]
 yvalues4=[k(i) for i in xvalues]
 
-plt.scatter(xvalues,yvalues1,label='Function F',color='red')
-plt.scatter(xvalues,yvalues2,label='Function G',color='green')
-plt.scatter(xvalues,yvalues3,label='Function H',color='blue')
-plt.scatter(xvalues,yvalues4,label='Function K',color='black')
+plt.plot(xvalues,yvalues1,label='Function F',color='red',markerfacecolor='black',marker='o')
+plt.plot(xvalues,yvalues2,label='Function G',color='green',markerfacecolor='black',marker='o')
+plt.plot(xvalues,yvalues3,label='Function H',color='blue',markerfacecolor='black',marker='o')
+plt.plot(xvalues,yvalues4,label='Function K',color='black',markerfacecolor='black',marker='o')
 plt.legend()
 plt.xlabel('Values of x--->',fontsize=20)
 plt.ylabel('Values of functions--->',fontsize=20)
