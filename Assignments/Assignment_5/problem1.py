@@ -9,10 +9,13 @@ csvDataNum = csvData[["State","A","B","C","D","E","F","G","H","I","J","K"]].to_n
 data = csvDataNum.tolist()
 # Access values as usual from data # For eg. data[0][3] is 25 print(data[0][3])
 population_density=[]
+perMarginal=[]
+perWomen=[]
 for i in data:
     population_density.append(i[6])
+    perMarginal.append(i[7])
+    perWomen.append(i[11])
 
-print(population_density)
 
 #part-a
 
@@ -52,6 +55,20 @@ print("Median population density is",median(population_density))
 print("Average population density is",average(population_density))
 
 print("Mode of population density is",mode(population_density))
+
+print(f"Higest percentage of marginal farmers is {max(perMarginal)}")
+print(f"Lowest percentage of marginal farmers is {min(perMarginal)}")
+print(f"Average percentage of marginal farmers is {average(perMarginal)}")
+print(f"Median percentage of marginal farmers is {median(perMarginal)}")
+print(f"Mode of percentage of marginal farmers is {mode(perMarginal)}")
+
+print(f"Highest percentage of women in the overall workforce is {max(perWomen)}")
+print(f"Lowest percentage of women in the overall workforce is {min(perWomen)}") 
+print(f"Average percentage of women in the overall workforce is {average(perMarginal)}")
+print(f"Median percentage of women in the overall workforce is {median(perWomen)}")
+print(f"Mode of percentage of women in the overall workforce is {mode(perWomen)}")
+
+
 
 #part-b
 
