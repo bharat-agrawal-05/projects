@@ -1,4 +1,3 @@
-import numpy as np
 import matplotlib.pyplot as plt
 import sys 
 
@@ -10,8 +9,13 @@ def is_int(n):
         return True
     except ValueError:
         return False
+    
+if len(sys.argv)==1:
+    print("No filepaths given, Please provide filepaths as command line arguments")
+    exit()
 
-for i in range(1,4):
+n=len(sys.argv)-1
+for i in range(1,n+1):
     try:
         filepath=sys.argv[i]
         with open(filepath,'r') as f:
@@ -23,19 +27,18 @@ for i in range(1,4):
             for i in range(1,len(x)):
                 if is_int(x[i]):
                     x1.append(int(x[i]))
-                else:
-                    continue
+                
             for i in range(1,len(y)):
                 if is_int(y[i]):
                     y1.append(int(y[i]))
-                else:
-                    continue
-
+                
             plt.scatter(x1,y1)
-            plt.xlabel("x")
-            plt.ylabel("y")
+            plt.xlabel("X-Values",fontsize=18)
+            plt.ylabel("Y-Values",fontsize=18)
+            plt.title(f'Graph for {filepath}',fontsize=18)
+            plt.savefig(f'{filepath}.png')
             plt.show()
 
 
     except FileNotFoundError or IndexError:
-        print("File not found")
+        print(f"File with Filepath - '{filepath}' , not found")
