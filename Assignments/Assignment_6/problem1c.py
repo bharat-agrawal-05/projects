@@ -8,7 +8,13 @@ def is_int(n):
         return False
     
 c=open("Output1c.txt","w")
-for i in range(1,4):
+
+if len(sys.argv)==1:
+    print("No filepaths given, Please provide filepaths as command line arguments")
+    exit()
+
+n=len(sys.argv)-1
+for i in range(1,n+1):
     try:
         filepath=sys.argv[i]
         with open(filepath,'r') as f:
@@ -36,7 +42,7 @@ for i in range(1,4):
             rNum=(len(x1)*xysum)-(xsum*ysum)
             rDen=np.sqrt((len(x1)*np.sum(np.square(x1))-np.square(xsum))*(len(y1)*np.sum(np.square(y1))-np.square(ysum)))
             r=rNum/rDen
-            c.write(str(r)+'\n')
+            c.write(str(r)+' ')
 
     except FileNotFoundError or FileExistsError:
         print("Invalid path")
