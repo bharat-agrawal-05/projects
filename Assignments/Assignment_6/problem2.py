@@ -1,14 +1,21 @@
+import sys
 
 myDict=[]
 temp={}
-with open ('problem2Input','r') as f:
-    lines=f.readlines()
-    for line in lines:
-        for word in line.split():
-            if word in temp:
-                temp[word]+=1
-            else:
-                temp[word]=1
+if len(sys.argv)==1:
+    print("No filepaths given, Please provide filepaths as command line arguments")
+    exit()
+
+for i in range(1,len(sys.argv)):
+    filepath=sys.argv[i]
+    with open (filepath,'r') as f:
+        lines=f.readlines()
+        for line in lines:
+            for word in line.split():
+                if word in temp:
+                    temp[word]+=1
+                else:
+                    temp[word]=1
                 
 for i in list(temp.keys()):
     myDict.append({'word':i,'frequency':temp[i]})
