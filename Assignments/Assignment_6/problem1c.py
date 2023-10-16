@@ -1,5 +1,6 @@
 import numpy as np
 import sys 
+
 def is_int(n):
     try:
         int(n)
@@ -46,3 +47,5 @@ for i in range(1,n+1):
 
     except FileNotFoundError or FileExistsError:
         print("Invalid path")
+
+c.close()
