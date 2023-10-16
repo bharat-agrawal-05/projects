@@ -20,7 +20,10 @@ for i in range(1,len(sys.argv)):
 for i in list(temp.keys()):
     myDict.append({'word':i,'frequency':temp[i]})
 
-sorted_myDict=sorted(myDict,key=lambda x:x['frequency'],reverse=True)
+def freq(item):
+    return item['frequency']
+
+sorted_myDict=sorted(myDict,key=freq,reverse=True)
 
 import csv
 with open('problem2Output.csv', 'w') as csvop: 
