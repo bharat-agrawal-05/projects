@@ -40,5 +40,5 @@ for i in range(1,n+1):
             plt.show()
 
 
-    except FileNotFoundError or IndexError:
+    except FileNotFoundError or Exception:
         print(f"File with Filepath - '{filepath}' , not found")
