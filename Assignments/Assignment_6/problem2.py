@@ -5,20 +5,25 @@ temp={}         #temporary dictionary to store the words and their frequencies
 if len(sys.argv)==1:
     print("No filepaths given, Please provide filepaths as command line arguments")
     exit()
+    
+try:
+    #the following is the code for reading the filepaths from command line arguments and storing the words and their frequencies in a dictionary
+    for i in range(1,len(sys.argv)):
+        filepath=sys.argv[i]
+        with open (filepath,'r') as f:
+            lines=f.readlines()
+            for line in lines:
+                for word in line.split():
+                    word = word.lower()
+                    if word in temp:
+                        temp[word]+=1
+                    else:
+                        temp[word]=1
 
-#the following is the code for reading the filepaths from command line arguments and storing the words and their frequencies in a dictionary
-for i in range(1,len(sys.argv)):
-    filepath=sys.argv[i]
-    with open (filepath,'r') as f:
-        lines=f.readlines()
-        for line in lines:
-            for word in line.split():
-                word = word.lower()
-                if word in temp:
-                    temp[word]+=1
-                else:
-                    temp[word]=1
-                
+except FileNotFoundError or Exception:
+    print("Invalid path")
+    exit()
+                    
 for i in list(temp.keys()):
     myDict.append({'word':i,'frequency':temp[i]})       #storing the words and their frequencies in a list of dictionaries
 
