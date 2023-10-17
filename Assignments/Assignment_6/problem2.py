@@ -13,6 +13,7 @@ for i in range(1,len(sys.argv)):
         lines=f.readlines()
         for line in lines:
             for word in line.split():
+                word = word.lower()
                 if word in temp:
                     temp[word]+=1
                 else:
