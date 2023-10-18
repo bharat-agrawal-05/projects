@@ -3,7 +3,7 @@ import sys
 myDict=[]
 temp={}         #temporary dictionary to store the words and their frequencies
 if len(sys.argv)==1:
-    print("No filepaths given, Please provide filepaths as command line arguments")
+    print("No filepaths given, Please provide filepath as command line argument")
     exit()
     
 try:
@@ -11,6 +11,11 @@ try:
     filepath=sys.argv[1]
     with open (filepath,'r') as f:
         lines=f.readlines()
+
+        if len(lines)==0:
+            print('File is empty, Please provide a file with text ')
+            exit()
+
         for line in lines:
             for word in line.split():
                 word = word.lower()
