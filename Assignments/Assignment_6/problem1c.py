@@ -1,21 +1,21 @@
 import numpy as np
 import sys 
 
-def is_int(n):
+def is_int(n):          #function for checking if the input is convertable to int or not
     try:
         int(n)
         return True
     except ValueError:
         return False
     
-c=open("Output1c.txt","w")
+c=open("Output1c.txt","w")      #opening the output file to write the output , this line of code will also create the file if it does not exist
 
-if len(sys.argv)==1:
+if len(sys.argv)==1:        #checks if the filepath is given as command line argument or not
     print("No filepaths given, Please provide filepaths as command line arguments")
     exit()
 
 n=len(sys.argv)-1
-for i in range(1,n+1):
+for i in range(1,n+1):          #iterating through the filepaths given as command line arguments
     try:
         filepath=sys.argv[i]
         with open(filepath,'r') as f:
@@ -27,15 +27,13 @@ for i in range(1,n+1):
             for i in range(1,len(x)):
                 if is_int(x[i]):
                         x1.append(int(x[i]))
-                else:
-                    continue
-
-
+                
             for i in range(1,len(y)):
                 if is_int(y[i]):
                     y1.append(int(y[i]))
-                else:
-                    continue
+                
+            x1=np.array(x1)
+            y1=np.array(y1)
             xsum=np.sum(x1)
             ysum=np.sum(y1)
             xysum=np.sum(np.multiply(x1,y1))

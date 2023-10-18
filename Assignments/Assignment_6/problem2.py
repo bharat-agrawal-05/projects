@@ -2,7 +2,7 @@ import sys
 
 myDict=[]
 temp={}         #temporary dictionary to store the words and their frequencies
-if len(sys.argv)==1:
+if len(sys.argv)==1:            #checks if the filepath is given as command line argument or not
     print("No filepaths given, Please provide filepath as command line argument")
     exit()
     
@@ -12,20 +12,19 @@ try:
     with open (filepath,'r') as f:
         lines=f.readlines()
 
-        if len(lines)==0:
+        if len(lines)==0:           #checks if the file is empty
             print('File is empty, Please provide a file with text ')
             exit()
 
         for line in lines:
             for word in line.split():
-                word = word.lower()
                 if word in temp:
-                    temp[word]+=1
+                    temp[word]+=1           #this a counter for words that are repeated
                 else:
                     temp[word]=1
 
 except FileNotFoundError or Exception:
-    print("Invalid path")
+    print("Invalid path")                   #checks if the filepath is valid or not
     exit()
                     
 for i in list(temp.keys()):

@@ -3,29 +3,29 @@ import sys
 
 #part-b
 
-def is_int(n):
+def is_int(n):          #function for checking if the input is convertable to int or not
     try:
         int(n)
         return True
     except ValueError:
         return False
     
-if len(sys.argv)==1:
+if len(sys.argv)==1:        #checks if the filepath is given as command line argument or not
     print("No filepaths given, Please provide filepaths as command line arguments")
     exit()
 
 n=len(sys.argv)-1
-for i in range(1,n+1):
+for i in range(1,n+1):      #iterating through the filepaths given as command line arguments
     try:
         filepath=sys.argv[i]
         with open(filepath,'r') as f:
             l=f.readlines()
             x=l[0].split()
-            y=l[1].split()
+            y=l[1].split()      
             x1=[]
             y1=[]
             for i in range(1,len(x)):
-                if is_int(x[i]):
+                if is_int(x[i]):                
                     x1.append(int(x[i]))
                 
             for i in range(1,len(y)):
@@ -40,5 +40,5 @@ for i in range(1,n+1):
             plt.show()
 
 
-    except FileNotFoundError or Exception:
+    except FileNotFoundError or Exception:                 
         print(f"File with Filepath - '{filepath}' , not found")
