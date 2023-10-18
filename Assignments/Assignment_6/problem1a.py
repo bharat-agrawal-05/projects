@@ -30,10 +30,10 @@ for i in range(1,len(sys.argv)):
             ymean=np.mean(y1)
             x=x1-xmean
             y=y1-ymean
-            rNum=np.sum(x*y)        #dot product of x and y
-            rDen=np.sqrt(np.sum(np.square(x))*np.sum(np.square(y)))   #product of magnitude of x and y
-            r=rNum/rDen
-            print(r)
+            cos_theta_num=np.sum(x*y)        #dot product of x and y
+            cos_theta_den=np.sqrt(np.sum(np.square(x))*np.sum(np.square(y)))   #product of magnitude of x and y
+            cos_theta=cos_theta_num/cos_theta_den
+            print(cos_theta)
 
             #finding r using the formula
             rnum=(len(x1)*np.sum(x1*y1))-(np.sum(x1)*np.sum(y1))
