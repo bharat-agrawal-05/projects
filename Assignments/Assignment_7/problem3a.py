@@ -1,4 +1,3 @@
-# import sys 
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -6,14 +5,14 @@ ball1,ball2,ball3,ball4=0,0,0,0
 trials=[]
 relball1,relball2,relball3,relball4=[],[],[],[]
 for i in range(50000):
-    guess=np.random.randint(1,5)
-    if guess==1:
+    guess=np.random.randint(0,4)
+    if guess==0:
         ball1+=1
-    elif guess==2:
+    elif guess==1:
         ball2+=1
-    elif guess==3:
+    elif guess==2:
         ball3+=1
-    elif guess==4:
+    elif guess==3:
         ball4+=1
     relball1.append(ball1/(i+1))
     relball2.append(ball2/(i+1))
