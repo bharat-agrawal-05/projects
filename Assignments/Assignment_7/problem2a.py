@@ -53,11 +53,11 @@ if np.linalg.det(a)!=0 :
     with open('problem2aOp.txt','w') as f:
         f.write('Unique solution')
 
-elif x==0 and np.linalg.det(a)==0:
+elif x.all()==0 and np.linalg.det(a)==0:
     with open('problem2aOp.txt','w') as f:
         f.write('Infinite solutions')
 
-elif x!=0 and np.linalg.det(a)==0:
+elif x.all()!=0 and np.linalg.det(a)==0:
     with open('problem2aOp.txt','w') as f:
         f.write('No solution')
     
