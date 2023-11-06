@@ -54,7 +54,7 @@ def circle(size, centre=0, boundary = 128):
     figure.set_size_inches(16, 12)
     
     plt.show() # comment this line and uncomment next to save image
-    #plt.savefig('problem1bOp.png', bbox_inches='tight')# change this to problem1bOp.png
+    plt.savefig('problem1bOp.png', bbox_inches='tight')# change this to problem1bOp.png
  
     return kernel_2D
 
