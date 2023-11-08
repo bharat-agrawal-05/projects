@@ -18,7 +18,7 @@ imGrayscale = ImageOps.grayscale(imInp)
 
 # converting image to numpy array
 import numpy as np
-pixels2D = np.array(imGrayscale)
+pixels2D = np.array(imGrayscale,dtype='int')
 print(pixels2D.shape)
 
 # showing/saving image
@@ -36,7 +36,6 @@ plt.yticks(fontsize=10)
 plt.savefig('problem1ci.png')
 plt.show()
 
-
 data=[]
 for row in pixels2D:
     for i in range(len(row)):
@@ -44,12 +43,11 @@ for row in pixels2D:
             data.append(row[i]-row[i-1])
         else:
             data.append(row[0])
-x=[]
-for i in range(max(pixelflat)//16+2):
-    x.append(16*i)
+
+x=[i for i in range(min(data),max(data)+1,16)]
 
 
-plt.hist(data,bins=16)
+plt.hist(data,bins=32,)
 plt.xticks(x,fontsize=8)
 plt.yticks(fontsize=10)
 plt.savefig('problem1cii.png')

@@ -1,6 +1,5 @@
 import sys,time
 
-
 if len(sys.argv[1:])!= 1:
     print('please enter one file path as command line argument')
     exit()
@@ -8,11 +7,10 @@ if len(sys.argv[1:])!= 1:
 try:
     with open(sys.argv[1],'r') as f:
         lines=f.readlines()
-        word=lines[0]
+        word=int(lines[0])
         array=lines[1]
-        arr=[]
-        for i in array.split():
-            arr.append(int(i))
+        arr=[int(i) for i in array.split()]
+        
 except:
     print('File not found')
     exit()
@@ -21,12 +19,11 @@ start=time.time()
 
 for i in range(len(arr)):
     if arr[i] == word:
-        print('word was found at index',i)
+        print(f'word {word} was found at index {i}')
         found=True
         break
 end=time.time()
 if not(found):
-    print('word was not in array')
-
+    print(f'word was not in array')
 
 print('time taken was',end-start)

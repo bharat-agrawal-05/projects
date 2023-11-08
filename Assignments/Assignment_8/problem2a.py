@@ -2,26 +2,18 @@
 import sys,time
 
 def binearsearch(x,l):
-    mid=(len(l)-1)//2
-    end=len(l)
+    end=len(l)-1
     start=0
-    found=False
-    while x!=l[mid]:
+    while start<=end:
         mid=(end+start)//2 
-        if x == l[mid]:
-            found=True
-            break
+        if x == l[mid]: 
+            return mid   
         if x<l[mid]:
-            end=mid
-        
+            end=mid-1
         if x>l[mid]:
-            start=mid
-        if mid==end or mid==start:
-            break
-    if not(found):
-        return 'word was not in array'
-    return mid
-
+            start=mid+1
+    
+    return 'word was not in array'
 
 i=sys.argv[1:]
 if len(i)!=1:
@@ -31,7 +23,7 @@ if len(i)!=1:
 try:
     with open(sys.argv[1],'r') as f:
         lines=f.readlines()
-        word=lines[0]
+        word=int(lines[0])
         array=lines[1]
         arr=[]
         for i in array.split():
