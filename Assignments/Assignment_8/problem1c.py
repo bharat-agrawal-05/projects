@@ -33,6 +33,7 @@ pixelflat=pixels2D.flatten()
 plt.hist(pixelflat)
 plt.xticks(fontsize=10)
 plt.yticks(fontsize=10)
+plt.title('histogram of pixel intensity')
 plt.savefig('problem1ci.png')
 plt.show()
 
@@ -47,8 +48,9 @@ for row in pixels2D:
 x=[i for i in range(min(data),max(data)+1,16)]
 
 
-plt.hist(data,bins=32,)
-plt.xticks(x,fontsize=8)
+plt.hist(data,bins=32)
+plt.title('histogram of difference of pixel intensity with its left neighbour')
+plt.xticks(x,fontsize=8,rotation=90)
 plt.yticks(fontsize=10)
 plt.savefig('problem1cii.png')
 plt.show()
