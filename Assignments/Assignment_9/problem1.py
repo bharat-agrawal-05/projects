@@ -1,4 +1,6 @@
 import pandas as pd
+import csv
+import sys
 
 #part-a
 df=pd.read_csv('Cars93.csv')
@@ -9,8 +11,6 @@ df.index=df.index+1
 df.to_csv('problem1a.csv')
 
 #part-b
-import pandas as pd
-import csv 
 
 df=pd.read_csv('Cars93.csv')
 types=df['Type'].unique()
@@ -26,8 +26,6 @@ for i in types:
         writer.writerows(required_data.values)
     
 #part-c
-import sys
-import pandas as pd
 
 if len(sys.argv)!=2:
     print('Enter Name of the Manufacturer as command line argument')
@@ -39,10 +37,8 @@ required_data=df[df['Manufacturer']==input]['Model']
 print(required_data)
 
 #part-d
-import pandas as pd
 df=pd.read_csv('Cars93.csv')
 required_data=df.groupby('Manufacturer').size().sort_values(ascending=False)
-print(required_data.shape)
 header=['Count']
 df=pd.DataFrame(required_data,columns=header)
 df.to_csv('problem1d.csv')
