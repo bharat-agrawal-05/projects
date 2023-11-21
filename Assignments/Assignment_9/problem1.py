@@ -20,7 +20,6 @@ for i in types:
 
 if len(sys.argv)!=2:
     print('Enter Name of the Manufacturer as command line argument')
-    exit()
 
 try:
     input=sys.argv[1]
@@ -29,7 +28,6 @@ try:
     print(required_data)
 except:
     print('Invalid Input')
-    exit()
 
 #part-d
 df=pd.read_csv('data/Cars93.csv')
