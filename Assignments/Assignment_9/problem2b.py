@@ -21,22 +21,22 @@ class stack():
             self.element=self.contents[-1]
             self.contents=[self.contents[i] for i in range(0,len(self.contents)-1)]
             return f'{self.element} has been popped\n'
-
+        
     def peek(self):
         if self.isEmpty():
             return 'stack is empty\n'
         else:
             return f'{self.contents[-1]} is at the top of the stack\n'
-
+        
 stack_list=stack()
 choice=''
 while choice!=4:
     choice=eval(input("Enter 1 to push to stack \nEnter 2 to pop from stack \nEnter 3 to peek from the stack \nEnter 4 to exit \nINPUT --->"))
     if choice == 1:
         element=eval(input('Enter the element to be pushed: '))
-        stack_list.push(element)
+        print(stack_list.push(element))
         print(stack_list)
-
+     
     elif choice ==2:
         print(stack_list.pop())
 

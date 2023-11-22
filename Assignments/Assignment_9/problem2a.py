@@ -14,7 +14,7 @@ try:
     marks=int(input('Enter the marks: '))
     name=input('Enter the name: ')
     roll_no=input('Enter the roll number: ')
-    if roll_no[:3]=='B23' and len(roll_no)==6 and marks <=100 and marks >=0:
+    if roll_no[:3]=='B23' and len(roll_no)==6 and marks <=100 and marks >0:
         student=ic152(name,roll_no,marks)
         print(student.check())
         

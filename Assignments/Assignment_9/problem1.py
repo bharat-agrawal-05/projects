@@ -9,15 +9,15 @@ df.index=df.index+1
 df.to_csv('problem1a.csv')
 
 #part-b
-
+print('-------------Part-b---------------')
 df=pd.read_csv('data/Cars93.csv')
 types=list(df['Type'].unique())
 for i in types:
     data=df.groupby('Type').get_group(i)
-    print(data[data['Max.Price']==data['Max.Price'].max()])
+    print(data[data['Price']==data['Price'].max()])
     
 #part-c
-
+print('------------Part-c----------------')
 if len(sys.argv)!=2:
     print('Enter Name of the Manufacturer as command line argument')
 
