@@ -24,8 +24,9 @@ if len(sys.argv)!=2:
 try:
     input=sys.argv[1]
     df=pd.read_csv('data/Cars93.csv')
-    required_data=df[df['Manufacturer']==input]['Model']
-    print(required_data)
+    required_data=list(df[df['Manufacturer']==input]['Model'])
+    d=pd.DataFrame(required_data,columns=['Models'],index=[i for i in range(1,len(required_data)+1)])
+    print(d)
 except:
     print('Invalid Input')
 
