@@ -35,7 +35,6 @@ while choice!=4:
     if choice == 1:
         element=eval(input('Enter the element to be pushed: '))
         print(stack_list.push(element))
-        print(stack_list)
      
     elif choice ==2:
         print(stack_list.pop())
