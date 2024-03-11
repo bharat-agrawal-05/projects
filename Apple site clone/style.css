@@ -1,0 +1,27 @@
+.main{
+    margin:0px;
+    padding: 0px;
+    display:block;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: max-content;
+    border:5px solid;
+
+}
+.menubar{
+    display:flex;
+    margin: 1px;
+    justify-content: center;
+    align-items: center;
+    background:#181818;
+    height: 5vh;
+    width: 100%;
+    border: 5px solid;
+    color: white;
+}
+.menuelem{
+    margin: 2px;
+}
+
+
